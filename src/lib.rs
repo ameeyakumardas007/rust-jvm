@@ -55,7 +55,7 @@ impl JVM {
 
     let mut jvm_options: Vec<JavaVMOption> = cstrings.iter().map(|x| {
       JavaVMOption {
-        optionString: x.as_ptr() as *mut u8,
+        optionString: x.as_ptr() as *mut i8,
         extraInfo: ptr::null_mut()
       }
     }).collect();
